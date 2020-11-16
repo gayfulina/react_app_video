@@ -5,11 +5,14 @@ import youtube from '../apis/youtube';
 const KEY = "YOUR_KEY";
 
 class App extends React.Component {
+    onTermSubmit = (term) => {
+        console.log(term);
+    }
 
     render() {
         return (
             <div className="ui container">
-                <SearchBar />
+                <SearchBar onFormSubmit={this.onTermSubmit}/>
             </div>
         )
     }
